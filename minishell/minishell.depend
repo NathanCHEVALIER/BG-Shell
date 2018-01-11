@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1515699165 source:d:\prog\c\minishell\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"interpreteur.h"
+
+1515700132 d:\prog\c\minishell\interpreteur.h
+	<unistd.h>
+	<stdio.h>
+	<time.h>
+	<stdlib.h>
+	"crypto.h"
+
+1515699089 d:\prog\c\minishell\crypto.h
+	<dirent.h>
+	<stdlib.h>
+	<stdio.h>
+	<sys/types.h>
+
+1515700708 source:d:\prog\c\minishell\interpreteur.c
+	"interpreteur.h"
+
+1515699599 source:d:\prog\c\minishell\crypto.c
+	"crypto.h"
+
