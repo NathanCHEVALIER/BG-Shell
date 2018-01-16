@@ -5,22 +5,31 @@ void interpreteur(Command cmd){
         if(strcmp(cmd.argv[0], "exit\0") == 0){
             exit(0);
         }else if(strcmp(cmd.argv[0], "crypter\0") == 0){
-            if(cmd.argc == 2) cryter(cmd.argv[1]);
-        }else if(strcmp(cmd.argv[0], "caca\0") == 0){
-            unsigned int t ;
-            for(int i = 0; i <= 100; i++){
-                printf("\r");
-                t = rand() / 100;
-
-                unsigned int r = rand() / 10000;
-                for(int j = 0; j <= r; j++){
-                    printf("du blabla qui defile...\n");
-                }
-                printf("Chargement: %d%%", i, t);
-
-                _sleep(t);
+            if(cmd.argc == 3){
+                crypter(cmd.argv[1], cmd.argv[2]);
             }
-            printf("\n");
+        }else if(strcmp(cmd.argv[0], "decrypter\0") == 0){
+            if(cmd.argc == 3){
+                decrypter(cmd.argv[1], cmd.argv[2]);
+            }
+        }else if(strcmp(cmd.argv[0], "caca\0") == 0){
+            printf("bravo tu vien de faire caca\n");
+        }else if(strcmp(cmd.argv[0], "test\0") == 0){
+            if(cmd.argc == 2){
+                char *a = malloc(sizeof(char) * (strlen(cmd.argv[1]) + 1));
+                strcpy(a, cmd.argv[1]);
+                printf("salut\n");
+                int y = -1;
+                while(a[++y] != '\0'){
+                    printf("Le char est %c\n", a[y]);
+                }
+
+                printf("aaaaaaaaaaaaaaaaaaaaaaaaaaa\n");
+                y = -1;
+                while(a[++y] != '\0'){
+                    printf("Le char est %c\n", a[y]);
+                }
+            }
         }
     }
 }
@@ -62,7 +71,7 @@ Command createCommand(const char* str){
         }
     }
     if(count > longest) longest = count;
-    printf("le plus long argument fait %d char\n", longest);
+    //printf("le plus long argument fait %d char\n", longest);
 
 
     char **r = NULL;

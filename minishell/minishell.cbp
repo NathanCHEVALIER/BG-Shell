@@ -32,6 +32,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="crypto.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="crypto.h" />
+		<Unit filename="interpreteur.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="interpreteur.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

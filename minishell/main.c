@@ -6,12 +6,6 @@
                              free(&cmd);
 #include "interpreteur.h"
 
-
-
-
-
-
-
 int main()
 {
     printf("Hello world!\n");
@@ -20,7 +14,6 @@ int main()
         printf("Shell: ");
         fgets(input, 100, stdin);
         Command cmd = createCommand(input);
-        //printCommand(cmd);
         interpreteur(cmd);
         destroy(cmd);
     }
